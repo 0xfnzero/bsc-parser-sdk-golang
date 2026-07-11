@@ -21,6 +21,16 @@
 | Transaction parsing | [bsc-parser-sdk-nodejs](https://github.com/0xfnzero/bsc-parser-sdk-nodejs) | **[bsc-parser-sdk-golang](https://github.com/0xfnzero/bsc-parser-sdk-golang)** |
 | Protocol SDKs | [four-trading-sdk](https://github.com/0xfnzero/four-trading-sdk) | [pancakeswap-sdk](https://github.com/0xfnzero/pancakeswap-sdk) |
 
+## Installation
+
+```bash
+go get github.com/0xfnzero/bsc-parser-sdk-golang
+```
+
+Import the parser package as `github.com/0xfnzero/bsc-parser-sdk-golang/bscparser`. Go 1.24 or newer is required.
+
+## Quick Start
+
 Features:
 
 - Four.meme TokenManager2 calldata decoding and event parsing
@@ -62,3 +72,16 @@ if err == nil && decoded.Protocol == bscparser.ProtocolPancake {
     fmt.Println(decoded.Signature, decoded.Args["path"])
 }
 ```
+
+## Development
+
+```bash
+go test -race ./...
+go vet ./...
+```
+
+## Security Boundary
+
+The parser performs no signing or transaction submission. Validate source authenticity, contract addresses, and decoded intent before using stream events to trigger trades.
+
+Licensed under the [MIT License](./LICENSE).

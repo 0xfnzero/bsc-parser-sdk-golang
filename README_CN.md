@@ -21,6 +21,16 @@
 | 交易解析 | [bsc-parser-sdk-nodejs](https://github.com/0xfnzero/bsc-parser-sdk-nodejs) | **[bsc-parser-sdk-golang](https://github.com/0xfnzero/bsc-parser-sdk-golang)** |
 | 协议 SDK | [four-trading-sdk](https://github.com/0xfnzero/four-trading-sdk) | [pancakeswap-sdk](https://github.com/0xfnzero/pancakeswap-sdk) |
 
+## 安装
+
+```bash
+go get github.com/0xfnzero/bsc-parser-sdk-golang
+```
+
+代码中导入 `github.com/0xfnzero/bsc-parser-sdk-golang/bscparser`。需要 Go 1.24 或更高版本。
+
+## 快速开始
+
 - Four.meme TokenManager2 calldata 和事件解析
 - PancakeSwap V2 router calldata 解码
 - PancakeSwap V2 pair/factory 事件解析
@@ -60,3 +70,16 @@ if err == nil && decoded.Protocol == bscparser.ProtocolPancake {
     fmt.Println(decoded.Signature, decoded.Args["path"])
 }
 ```
+
+## 开发与验证
+
+```bash
+go test -race ./...
+go vet ./...
+```
+
+## 安全边界
+
+解析器不执行签名或交易提交。使用实时事件触发交易前，请验证数据源真实性、合约地址和解码后的交易意图。
+
+本项目使用 [MIT License](./LICENSE)。
