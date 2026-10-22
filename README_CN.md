@@ -1,9 +1,32 @@
 <div align="center">
-  <h1>BSC Parser SDK Go 版</h1>
+  <h1>🔍 BSC Parser SDK Go 版</h1>
   <h3><em>并发、低延迟的 BNB Smart Chain 解析基础设施</em></h3>
 </div>
 
 <p align="center"><strong>用于解码 BSC calldata、日志并消费服务商中立数据流的 Go SDK，解析热路径不执行 RPC 查询。</strong></p>
+
+<p align="center">
+  <a href="https://pkg.go.dev/github.com/0xfnzero/bsc-parser-sdk-golang">
+    <img src="https://img.shields.io/badge/go-reference-00ADD8?logo=go&logoColor=white" alt="Go 文档">
+  </a>
+  <img src="https://img.shields.io/badge/Go-1.24+-00ADD8?logo=go&logoColor=white" alt="Go 1.24 或更高版本">
+  <a href="https://github.com/0xfnzero/bsc-parser-sdk-golang/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="许可证">
+  </a>
+  <a href="https://github.com/0xfnzero/bsc-parser-sdk-golang">
+    <img src="https://img.shields.io/github/stars/0xfnzero/bsc-parser-sdk-golang?style=social" alt="GitHub Stars">
+  </a>
+  <a href="https://github.com/0xfnzero/bsc-parser-sdk-golang/network/members">
+    <img src="https://img.shields.io/github/forks/0xfnzero/bsc-parser-sdk-golang?style=social" alt="GitHub Forks">
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go">
+  <img src="https://img.shields.io/badge/BSC-F0B90B?style=for-the-badge&logo=binance&logoColor=white" alt="BNB Smart Chain">
+  <img src="https://img.shields.io/badge/Calldata-6C5CE7?style=for-the-badge&logo=ethereum&logoColor=white" alt="Calldata 解析">
+  <img src="https://img.shields.io/badge/Real--time_Streams-00A67E?style=for-the-badge&logo=socketdotio&logoColor=white" alt="实时数据流">
+</p>
 
 <p align="center">
   <a href="./README_CN.md">中文</a> |
@@ -13,7 +36,9 @@
   <a href="https://discord.gg/vuazbGkqQE">Discord</a>
 </p>
 
-## BSC SDK 家族
+---
+
+## 🧭 BSC SDK 家族
 
 | 类别 | 主要仓库 | 替代或配套仓库 |
 | --- | --- | --- |
@@ -21,7 +46,7 @@
 | 交易解析 | [bsc-parser-sdk-nodejs](https://github.com/0xfnzero/bsc-parser-sdk-nodejs) | **[bsc-parser-sdk-golang](https://github.com/0xfnzero/bsc-parser-sdk-golang)** |
 | 协议 SDK | [four-trading-sdk](https://github.com/0xfnzero/four-trading-sdk) | [pancakeswap-sdk](https://github.com/0xfnzero/pancakeswap-sdk) |
 
-## 安装
+## 📦 安装
 
 ```bash
 go get github.com/0xfnzero/bsc-parser-sdk-golang
@@ -29,7 +54,7 @@ go get github.com/0xfnzero/bsc-parser-sdk-golang
 
 代码中导入 `github.com/0xfnzero/bsc-parser-sdk-golang/bscparser`。需要 Go 1.24 或更高版本。
 
-## 快速开始
+## 🚀 快速开始
 
 - Four.meme TokenManager2 calldata 和事件解析
 - PancakeSwap V2 router calldata 解码
@@ -71,14 +96,14 @@ if err == nil && decoded.Protocol == bscparser.ProtocolPancake {
 }
 ```
 
-## 开发与验证
+## 🛠️ 开发与验证
 
 ```bash
 go test -race ./...
 go vet ./...
 ```
 
-## 安全边界
+## 🛡️ 安全边界
 
 解析器不执行签名或交易提交。使用实时事件触发交易前，请验证数据源真实性、合约地址和解码后的交易意图。
 

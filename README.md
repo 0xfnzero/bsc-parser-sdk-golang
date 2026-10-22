@@ -1,19 +1,44 @@
 <div align="center">
-  <h1>BSC Parser SDK for Go</h1>
+  <h1>🔍 BSC Parser SDK for Go</h1>
   <h3><em>Concurrent, low-latency BNB Smart Chain parsing infrastructure</em></h3>
 </div>
 
 <p align="center"><strong>A Go SDK for decoding BSC calldata and logs and consuming provider-neutral streams without RPC reads in parser hot paths.</strong></p>
 
 <p align="center">
-  <a href="./README.md">English</a> |
+  <a href="https://pkg.go.dev/github.com/0xfnzero/bsc-parser-sdk-golang">
+    <img src="https://img.shields.io/badge/go-reference-00ADD8?logo=go&logoColor=white" alt="Go Reference">
+  </a>
+  <img src="https://img.shields.io/badge/Go-1.24+-00ADD8?logo=go&logoColor=white" alt="Go 1.24 or newer">
+  <a href="https://github.com/0xfnzero/bsc-parser-sdk-golang/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+  </a>
+  <a href="https://github.com/0xfnzero/bsc-parser-sdk-golang">
+    <img src="https://img.shields.io/github/stars/0xfnzero/bsc-parser-sdk-golang?style=social" alt="GitHub stars">
+  </a>
+  <a href="https://github.com/0xfnzero/bsc-parser-sdk-golang/network/members">
+    <img src="https://img.shields.io/github/forks/0xfnzero/bsc-parser-sdk-golang?style=social" alt="GitHub forks">
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go">
+  <img src="https://img.shields.io/badge/BSC-F0B90B?style=for-the-badge&logo=binance&logoColor=white" alt="BNB Smart Chain">
+  <img src="https://img.shields.io/badge/Calldata-6C5CE7?style=for-the-badge&logo=ethereum&logoColor=white" alt="Calldata parsing">
+  <img src="https://img.shields.io/badge/Real--time_Streams-00A67E?style=for-the-badge&logo=socketdotio&logoColor=white" alt="Real-time streams">
+</p>
+
+<p align="center">
   <a href="./README_CN.md">中文</a> |
+  <a href="./README.md">English</a> |
   <a href="https://fnzero.dev/">Website</a> |
   <a href="https://t.me/fnzero_group">Telegram</a> |
   <a href="https://discord.gg/vuazbGkqQE">Discord</a>
 </p>
 
-## BSC SDK Family
+---
+
+## 🧭 BSC SDK Family
 
 | Category | Primary repository | Alternative or companion |
 | --- | --- | --- |
@@ -21,7 +46,7 @@
 | Transaction parsing | [bsc-parser-sdk-nodejs](https://github.com/0xfnzero/bsc-parser-sdk-nodejs) | **[bsc-parser-sdk-golang](https://github.com/0xfnzero/bsc-parser-sdk-golang)** |
 | Protocol SDKs | [four-trading-sdk](https://github.com/0xfnzero/four-trading-sdk) | [pancakeswap-sdk](https://github.com/0xfnzero/pancakeswap-sdk) |
 
-## Installation
+## 📦 Installation
 
 ```bash
 go get github.com/0xfnzero/bsc-parser-sdk-golang
@@ -29,7 +54,7 @@ go get github.com/0xfnzero/bsc-parser-sdk-golang
 
 Import the parser package as `github.com/0xfnzero/bsc-parser-sdk-golang/bscparser`. Go 1.24 or newer is required.
 
-## Quick Start
+## 🚀 Quick Start
 
 Features:
 
@@ -73,14 +98,14 @@ if err == nil && decoded.Protocol == bscparser.ProtocolPancake {
 }
 ```
 
-## Development
+## 🛠️ Development
 
 ```bash
 go test -race ./...
 go vet ./...
 ```
 
-## Security Boundary
+## 🛡️ Security Boundary
 
 The parser performs no signing or transaction submission. Validate source authenticity, contract addresses, and decoded intent before using stream events to trigger trades.
 
